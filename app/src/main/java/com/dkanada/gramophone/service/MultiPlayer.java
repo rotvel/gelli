@@ -100,6 +100,10 @@ public class MultiPlayer implements Playback {
         mediaSource = new ConcatenatingMediaSource();
     }
 
+    public SimpleExoPlayer getExoPlayer() {
+        return exoPlayer;
+    }
+
     @Override
     public void setDataSource(@NonNull final String path) {
         isReady = false;

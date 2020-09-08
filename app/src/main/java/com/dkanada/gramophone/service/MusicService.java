@@ -173,7 +173,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         musicPlayerHandlerThread.start();
         playerHandler = new PlaybackHandler(this, musicPlayerHandlerThread.getLooper());
 
-        playback = new MultiPlayer(this);
+        playback = new MultiPlayerThreadWrapper(this);
         playback.setCallbacks(this);
 
         setupMediaSession();
